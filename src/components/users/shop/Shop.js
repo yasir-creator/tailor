@@ -19,65 +19,88 @@ class Shop extends Component {
     } else {
       if (userproduct.length > 0) {
         yasir = userproduct.map(pro => (
-          <div key={++i} className="tg-products tg-productgrid">
-            {" "}
-            {/* <div > */}{" "}
-            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-4">
-              <div className="tg-product">
-                <figure className="tg-productimg">
-                  <img
-                    src={pro.photoUrl[0].split(",")[0]}
-                    alt="image description"
-                  />
-                  <figcaption>
-                    <div className="tg-hoverimglink">
-                      <img
-                        src={pro.photoUrl[0].split(",")[1]}
-                        alt="image description"
-                        style={{
-                          height: 200
-                        }}
-                      />
-                      <Link
-                        to={{
-                          pathname: "/shopdetail",
-                          state: { pro: pro }
-                        }}
-                      >
-                        <span
+          <div
+            key={++i}
+            // style={{ width: 700, height: 400 }}
+            className="tg-container"
+          >
+            <div className="tg-row">
+              <div
+                className="col-xs-12 col-sm-12 col-md-4 col-sm-4 col-lg-4"
+                // style={{
+                //   maxWidth: 22.333333,
+                //   flex: 0
+                // }}
+              >
+                <div className="tg-product">
+                  <figure
+                    className="tg-productimg"
+                    // style={{
+                    //   maxWidth: 300
+                    // }}
+                  >
+                    <img
+                      src={pro.photoUrl[0].split(",")[0]}
+                      alt="image description"
+                      style={{
+                        maxWidth: 300,
+                        justifyContent: "center"
+                      }}
+                    />
+                    <figcaption>
+                      <div className="tg-hoverimglink">
+                        <img
+                          src={pro.photoUrl[0].split(",")[1]}
+                          alt="image description"
                           style={{
-                            color: "white",
-                            fontSize: 15
+                            height: 170
+                          }}
+                        />
+                        <Link
+                          to={{
+                            pathname: "/shopdetail",
+                            state: { pro: pro }
                           }}
                         >
-                          View Detail
-                        </span>
-                        <i className="fa fa-angle-right" />
-                      </Link>
+                          <span
+                            style={{
+                              fontSize: 15,
+                              color: "black"
+                            }}
+                          >
+                            View Detail
+                          </span>
+                          <i
+                            className="fa fa-angle-right"
+                            style={{
+                              color: "black"
+                            }}
+                          />
+                        </Link>
+                      </div>
+                    </figcaption>
+                  </figure>
+                  <div className="tg-productcontent">
+                    <div className="tg-producttitle">
+                      <h3>
+                        <Link to="shopdetail">{pro.name}</Link>
+                      </h3>
                     </div>
-                  </figcaption>
-                </figure>
-                <div className="tg-productcontent">
-                  <div className="tg-producttitle">
-                    <h3>
-                      <Link to="shopdetail">{pro.name}</Link>
-                    </h3>
-                  </div>
-                  <div className="tg-rating">
-                    <span className="tg-stars">
-                      <span />
-                    </span>
-                  </div>
-                  <div className="tg-price">
-                    <h4>
-                      <Link to="#">{pro.price}</Link>
-                    </h4>
+                    <div className="tg-rating">
+                      <span className="tg-stars">
+                        <span />
+                      </span>
+                    </div>
+                    <div className="tg-price">
+                      <h4>
+                        <Link to="#">{pro.price}</Link>
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div>{" "}
           </div>
-          // </div>
         ));
       }
     }
@@ -89,8 +112,8 @@ class Shop extends Component {
 				Inner Page Banner Start
 		**************************************/}
           <div className="tg-innerpagebanner">
-            <div className="container">
-              <div className="row">
+            <div className="tg-container">
+              <div className="tg-row">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <ol className="tg-breadcrumb">
                     <li>
@@ -110,16 +133,16 @@ class Shop extends Component {
 				Main Start
 		**************************************/}
           <main id="tg-main" className="tg-main tg-haslayout">
-            <div className="container">
-              <div className="row">
+            <div className="tg-container">
+              <div className="tg-row">
                 <div id="tg-twocolumns" className="tg-twocolumns">
                   <div className="col-xs-12 col-sm-8 col-md-7 col-lg-9 pull-right">
-                    <div className="row">
+                    <div className="tg-row">
                       <div id="tg-content" className="tg-content">
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <div className="tg-pagehead">
                             <h2>Suit Collections</h2>
-                            <div className="tg-description">
+                            {/* <div className="tg-description">
                               <p>
                                 Consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt utnalo labore dolore magna
@@ -130,21 +153,11 @@ class Shop extends Component {
                                 fugiat nulla pariatur sint occaecat cupidatat
                                 non proident.
                               </p>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                         <div className="tg-products tg-productgrid">
-                          <div class="container">
-                            <div
-                              className="row"
-                              style={{
-                                float: "none"
-                              }}
-                            >
-                              {" "}
-                              {yasir}
-                            </div>
-                          </div>
+                          {yasir}
                         </div>
 
                         {/* <div className="tg-products tg-productgrid">

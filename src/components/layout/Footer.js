@@ -54,30 +54,57 @@ class Footer extends Component {
                       </ul>
                       <ul className="tg-socialicons">
                         <li className="tg-facebook">
-                          <a href="https://www.facebook.com/" target="_blank">
-                            <i className="fa fa-facebook" />
+                          <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            style={{
+                              textDecoration: "none"
+                            }}
+                          >
+                            <i className="fab fa-facebook-f" />
                           </a>
                         </li>
                         <li className="tg-twitter">
-                          <a href="https://twitter.com/" target="_blank">
-                            <i className="fa fa-twitter" />
+                          <a
+                            href="https://twitter.com/"
+                            target="_blank"
+                            style={{
+                              textDecoration: "none"
+                            }}
+                          >
+                            <i className="fab fa-twitter" />
                           </a>
                         </li>
                         <li className="tg-linkedin">
                           <a
                             href="https://www.linkedin.com/feed/"
                             target="_blank"
+                            style={{
+                              textDecoration: "none"
+                            }}
                           >
-                            <i className="fa fa-linkedin" />
+                            <i className="fab fa-linkedin" />
                           </a>
                         </li>
                         <li className="tg-googleplus">
-                          <a href="https://www.google.com/" target="_blank">
-                            <i className="fa fa-google-plus" />
+                          <a
+                            href="https://www.google.com/"
+                            target="_blank"
+                            style={{
+                              textDecoration: "none"
+                            }}
+                          >
+                            <i className="fab fa-google-plus-g" />
                           </a>
                         </li>
                         <li className="tg-rss">
-                          <a href="https://rss.com/" target="_blank">
+                          <a
+                            href="https://rss.com/"
+                            target="_blank"
+                            style={{
+                              textDecoration: "none"
+                            }}
+                          >
                             <i className="fa fa-rss" />
                           </a>
                         </li>

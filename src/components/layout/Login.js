@@ -29,7 +29,7 @@ class Login extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/shop");
+      this.props.history.push("/checkout");
     }
 
     if (nextProps.errors) {
@@ -105,12 +105,13 @@ class Login extends Component {
                     <button type="submit" className="tg-btn">
                       Login
                     </button>
+                    <p className="message">
+                      Not registered?{" "}
+                      <Link to="/register">Create an account</Link>
+                    </p>
                   </div>
                 </fieldset>
               </form>
-              <p className="message">
-                Not registered? <Link to="/register">Create an account</Link>
-              </p>
             </div>
           </div>
         </div>

@@ -108,7 +108,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>
@@ -180,7 +180,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>
@@ -252,7 +252,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>
@@ -324,7 +324,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>
@@ -396,7 +396,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>
@@ -469,7 +469,7 @@ class BlogGrid extends Component {
                                   <ul className="tg-postmetadata">
                                     <li>
                                       <Link to="#">
-                                        <i className="fa fa-comment-o" />
+                                        <i className="fas fa-comment" />
                                         <span>357</span>
                                       </Link>
                                     </li>

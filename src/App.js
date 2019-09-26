@@ -15,6 +15,13 @@ import Home from "./components/layout/Home";
 import Header from "./components/layout/Header";
 import Slider from "./components/layout/Slider";
 import AddToCart from "./components/layout/AddToCart";
+import CheckOut from "./components/layout/CheckOut";
+import Payment from "./components/layout/Payment";
+import orderDetails from "./components/layout/orderDetails";
+import MyOrders from "./components/layout/MyOrders";
+import OrderDetail from "./components/layout/OrderDetail";
+import OwlCar from "./components/layout/OwlCar";
+import OwlCar2 from "./components/layout/OwlCar2";
 import TailorOnline from "./components/layout/TailorOnline";
 import Statistics from "./components/layout/Statistics";
 import UserMeasurment from "./components/layout/UserMeasurment";
@@ -35,10 +42,10 @@ import ContactUs from "./components/catagories/ContactUs";
 import Shop from "./components/users/shop/Shop";
 import ProductDetail from "./components/users/shop/ProductDetail";
 import BlogGrid from "./components/users/blog/BlogGrid";
-import BlogDetail from "./components/users/blog/BlogDetail";
-import BlogList from "./components/users/blog/BlogList";
+// import BlogDetail from "./components/users/blog/BlogDetail";
+// import BlogList from "./components/users/blog/BlogList";
 import About from "./components/users/About";
-import Error404 from "./components/users/Error404";
+// import Error404 from "./components/users/Error404";
 import CommingSoon from "./components/users/CommingSoon";
 
 import "./App.css";
@@ -68,46 +75,53 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/slider" component={Slider} />
-          <Route exact path="/onlinetailor" component={TailorOnline} />
-          <Route exact path="/statistics" component={Statistics} />
-          <Route exact path="/usermeasurment" component={UserMeasurment} />
-          <Route
-            exact
-            path="/productcategories"
-            component={ProductCategories}
-          />
-          <Route exact path="/tailorbyhand" component={TailorByHand} />
-          <Route exact path="/callaction" component={CallAction} />
-          <Route exact path="/team" component={TeamMembers} />
-          <Route exact path="/newsarticle" component={NewsArticle} />
-          <Route exact path="/featureproducts" component={FeaturedProducts} />
           <Route exact path="/" component={Home} />
-          <Switch>
-            <PrivateRoute exact path="/shirt" component={Shirt} />
-            <PrivateRoute exact path="/blazers" component={Blazers} />
-            <PrivateRoute exact path="/pants" component={Pants} />
-          </Switch>
-          <Route exact path="/howitwork" component={HowitWorks} />
-          <Route exact path="/contactus" component={ContactUs} />
-          <Switch>
-            <PrivateRoute exact path="/shop" component={Shop} />
-            <PrivateRoute exact path="/shopdetail" component={ProductDetail} />
-          </Switch>
+          <div className="container">
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/slider" component={Slider} />
+            <Route exact path="/onlinetailor" component={TailorOnline} />
+            <Route exact path="/statistics" component={Statistics} />
+            <Route exact path="/usermeasurment" component={UserMeasurment} />
+            <Route
+              exact
+              path="/productcategories"
+              component={ProductCategories}
+            />
+            <Route exact path="/tailorbyhand" component={TailorByHand} />
+            <Route exact path="/callaction" component={CallAction} />
+            <Route exact path="/team" component={TeamMembers} />
+            <Route exact path="/newsarticle" component={NewsArticle} />
+            <Route exact path="/featureproducts" component={FeaturedProducts} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/shirt" component={Shirt} />
+            <Route exact path="/blazers" component={Blazers} />
+            <Route exact path="/pants" component={Pants} />
+            <Route exact path="/shopdetail" component={ProductDetail} />
 
-          <Switch>
-            <PrivateRoute exact path="/newsgrid" component={BlogGrid} />
-            <PrivateRoute exact path="/newsdetail" component={BlogDetail} />
-            <PrivateRoute exact path="/newslist" component={BlogList} />
-          </Switch>
-          <Route exact path="/about" component={About} />
-          <Route exact path="/404" component={Error404} />
-          <Route exact path="/comingsoon" component={CommingSoon} />
-
+            <Route exact path="/newsgrid" component={BlogGrid} />
+            {/* <PrivateRoute exact path="/newsdetail" component={BlogDetail} />
+              <PrivateRoute exact path="/newslist" component={BlogList} /> */}
+            <Switch>
+              <PrivateRoute exact path="/checkout" component={CheckOut} />
+              <PrivateRoute exact path="/payment" component={Payment} />
+              <PrivateRoute
+                exact
+                path="/orderdetails"
+                component={orderDetails}
+              />
+              <PrivateRoute exact path="/myorder" component={MyOrders} />
+              <PrivateRoute exact path="/orderdetail" component={OrderDetail} />
+            </Switch>
+            <Route exact path="/howitwork" component={HowitWorks} />
+            <Route exact path="/contactus" component={ContactUs} />
+            <Route exact path="/about" component={About} />
+            {/* <Route exact path="/404" component={Error404} /> */}
+            <Route exact path="/comingsoon" component={CommingSoon} />
+          </div>
           <Route exact path="/addtocart" component={AddToCart} />
-
+          <Route exact path="/owl" component={OwlCar} />
+          <Route exact path="/owl2" component={OwlCar2} />
           <Footer />
         </div>
       </Router>

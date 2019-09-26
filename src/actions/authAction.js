@@ -6,7 +6,7 @@ import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 
 // Register User
 
-export const registeruser = (userData, history) => dispatch => {
+export const  registeruser = (userData, history) => dispatch => {
   //   return {
   //     type: TEST_DISPATCH,
   //     payload: userData
@@ -67,5 +67,11 @@ export const logoutUser = () => dispatch => {
   // Remove auth header for future requests
   setAuthToken(false);
   // Set current user to {} which will set isAuthenticated to false
+  dispatch(setCurrentUser({}));
+};
+// User Cart
+export const cartUser = () => dispatch => {
+  localStorage.addItem("jwtToken");
+  setAuthToken(true);
   dispatch(setCurrentUser({}));
 };

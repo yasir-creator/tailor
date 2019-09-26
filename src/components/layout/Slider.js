@@ -11,6 +11,7 @@ class Slider extends Component {
           showStatus={false}
           autoPlay={true}
           stopOnHover={false}
+          infiniteLoop={true}
         >
           <div>
             <img

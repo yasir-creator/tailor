@@ -20,60 +20,142 @@ class Header extends Component {
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul className="tg-addressinfo">
                 <li>
-                  <i className="icon-map-marker" />
-                  <address>14 Tottenham Court Road, Manchester</address>
+                  <i
+                    className="icon-map-marker"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <address
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    14 Tottenham Court Road, Manchester
+                  </address>
                 </li>
                 <li>
-                  <i className="icon-clock" />
-                  <time dateTime="2016-10-10">Mon - Sat 9:00 - 17:00</time>
+                  <i
+                    className="icon-clock"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <time
+                    dateTime="2016-10-10"
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    Mon - Sat 9:00 - 17:00
+                  </time>
                 </li>
                 <li>
-                  <i className="icon-phone-handset" />
-                  <span>+4 1234 567890</span>
+                  <i
+                    className="icon-phone-handset"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <span
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    +4 1234 567890
+                  </span>
                 </li>
               </ul>
               <ul className="tg-socialicons">
                 <li className="tg-facebook">
-                  <a href="https://www.facebook.com/" target="_blank">
-                    <i className="fa fa-facebook" />
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    style={{
+                      marginTop: 15,
+                      textDecoration: "none"
+                    }}
+                  >
+                    <i className="fab fa-facebook-f" />
                   </a>
                 </li>
                 <li className="tg-twitter">
-                  <a href="https://twitter.com/" target="_blank">
-                    <i className="fa fa-twitter" />
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    style={{
+                      marginTop: 15,
+                      textDecoration: "none"
+                    }}
+                  >
+                    <i className="fab fa-twitter" />
                   </a>
                 </li>
                 <li className="tg-linkedin">
-                  <a href="https://www.linkedin.com/feed/" target="_blank">
-                    <i className="fa fa-linkedin" />
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    target="_blank"
+                    style={{
+                      marginTop: 15,
+                      textDecoration: "none"
+                    }}
+                  >
+                    <i className="fab fa-linkedin" />
                   </a>
                 </li>
                 <li className="tg-googleplus">
-                  <a href="https://www.google.com/" target="_blank">
-                    <i className="fa fa-google-plus" />
+                  <a
+                    href="https://www.google.com/"
+                    target="_blank"
+                    style={{
+                      marginTop: 15,
+                      textDecoration: "none"
+                    }}
+                  >
+                    <i className="fab fa-google-plus-g" />
                   </a>
                 </li>
                 <li className="tg-rss">
-                  <a href="https://rss.com/" target="_blank">
+                  <a
+                    href="https://rss.com/"
+                    target="_blank"
+                    style={{
+                      marginTop: 15,
+                      textDecoration: "none"
+                    }}
+                  >
                     <i className="fa fa-rss" />
                   </a>
                 </li>
-                <form className="form-inline my-2 my-lg-0 ">
-                  <a
-                    href="#"
-                    onClick={this.onLogoutClick}
-                    className="btn btn-outline-light btn-lg mr-2 "
-                    style={{ backgroundColor: "gray" }}
-                  >
-                    <img
-                      className="rounded-circle"
-                      src={user.avatar}
-                      alt={user.name}
-                      style={{ width: "25px", marginRight: "5px" }}
-                    />{" "}
-                    Logout
-                  </a>
-                </form>
+
+                <button
+                  onClick={this.onLogoutClick}
+                  className="tg-btn mr-3 rounded"
+                  style={{
+                    textDecoration: "none",
+                    marginTop: 10
+                  }}
+                >
+                  <img
+                    className="rounded-circle"
+                    src={user.avatar}
+                    // alt={user.name}
+                    style={{ width: "25px", marginRight: "5px" }}
+                  />{" "}
+                  Logout
+                </button>
+
+                <Link
+                  to="/addtocart"
+                  className="tg-btn  rounded"
+                  style={{
+                    color: "white",
+                    textDecoration: "none",
+                    marginTop: 10
+                  }}
+                >
+                  <i className="fas fa-shopping-cart mr-2" /> Cart
+                </Link>
               </ul>
             </div>
           </div>
@@ -83,82 +165,165 @@ class Header extends Component {
 
     const guestLinks = (
       <div className="tg-topbar">
-        <div className="container">
-          <div className="row">
+        <div className="tg-container">
+          <div className="tg-row">
             <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <ul className="tg-addressinfo">
                 <li>
-                  <i className="icon-map-marker" />
-                  <address>14 Tottenham Court Road, Manchester</address>
+                  <i
+                    className="icon-map-marker"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <address
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    14 Tottenham Court Road, Manchester
+                  </address>
                 </li>
                 <li>
-                  <i className="icon-clock" />
-                  <time dateTime="2016-10-10">Mon - Sat 9:00 - 17:00</time>
+                  <i
+                    className="icon-clock"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <time
+                    dateTime="2016-10-10"
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    Mon - Sat 9:00 - 17:00
+                  </time>
                 </li>
                 <li>
-                  <i className="icon-phone-handset" />
-                  <span>+4 1234 567890</span>
+                  <i
+                    className="icon-phone-handset"
+                    style={{
+                      marginTop: 15
+                    }}
+                  />
+                  <span
+                    style={{
+                      marginTop: 15
+                    }}
+                  >
+                    +4 1234 567890
+                  </span>
                 </li>
               </ul>
               <ul className="tg-socialicons">
                 <li className="tg-facebook">
-                  <a href="https://www.facebook.com/" target="_blank">
-                    <i className="fa fa-facebook" />
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    style={{
+                      textDecoration: "none",
+                      marginTop: 15
+                    }}
+                  >
+                    <i className="fab fa-facebook-f" />
                   </a>
                 </li>
                 <li className="tg-twitter">
-                  <a href="https://twitter.com/" target="_blank">
-                    <i className="fa fa-twitter" />
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    style={{
+                      textDecoration: "none",
+                      marginTop: 15
+                    }}
+                  >
+                    <i className="fab fa-twitter" />
                   </a>
                 </li>
                 <li className="tg-linkedin">
-                  <a href="https://www.linkedin.com/feed/" target="_blank">
-                    <i className="fa fa-linkedin" />
+                  <a
+                    href="https://www.linkedin.com/feed/"
+                    target="_blank"
+                    style={{
+                      textDecoration: "none",
+                      marginTop: 15
+                    }}
+                  >
+                    <i className="fab fa-linkedin" />
                   </a>
                 </li>
                 <li className="tg-googleplus">
-                  <a href="https://www.google.com/" target="_blank">
-                    <i className="fa fa-google-plus" />
+                  <a
+                    href="https://www.google.com/"
+                    target="_blank"
+                    style={{
+                      textDecoration: "none",
+                      marginTop: 15
+                    }}
+                  >
+                    <i className="fab fa-google-plus-g" />
                   </a>
                 </li>
                 <li className="tg-rss">
-                  <a href="https://rss.com/" target="_blank">
+                  <a
+                    href="https://rss.com/"
+                    target="_blank"
+                    style={{
+                      textDecoration: "none",
+                      marginTop: 15
+                    }}
+                  >
                     <i className="fa fa-rss" />
                   </a>
                 </li>
-                <form className="form-inline my-2 my-lg-0 ">
-                  <button
-                    className="btn btn-outline-light btn-lg mr-2 "
-                    type="submit"
-                    style={{ backgroundColor: "gray" }}
+                {/* <form className="form-inline my-2 my-lg-0 "> */}
+                <button
+                  className="tg-btn rounded "
+                  type="submit"
+                  style={{
+                    marginTop: 10
+                  }}
+                >
+                  <Link
+                    to="/register"
+                    style={{
+                      color: "white",
+                      textDecoration: "none"
+                    }}
                   >
-                    <Link
-                      rel="stylesheet"
-                      to="/register"
-                      style={{
-                        color: "white"
-                      }}
-                    >
-                      {" "}
-                      Sign Up{" "}
-                    </Link>
-                  </button>
-                  <button
-                    className="btn btn-outline-light btn-lg mr-2 "
-                    type="submit"
-                    style={{ backgroundColor: "gray" }}
+                    {" "}
+                    Sign Up{" "}
+                  </Link>
+                </button>
+                <button
+                  className="tg-btn rounded "
+                  type="submit"
+                  style={{
+                    marginTop: 10
+                  }}
+                >
+                  <Link
+                    to="/login"
+                    style={{
+                      color: "white",
+                      textDecoration: "none"
+                    }}
                   >
-                    <Link
-                      rel="stylesheet"
-                      to="/login"
-                      style={{
-                        color: "white"
-                      }}
-                    >
-                      Login
-                    </Link>
-                  </button>
-                </form>
+                    Login
+                  </Link>
+                </button>
+                <Link
+                  className="tg-btn rounded "
+                  to="/addtocart"
+                  style={{
+                    textDecoration: "none",
+                    marginTop: 10
+                  }}
+                >
+                  <i className="fas fa-shopping-cart mr-2" />
+                  Cart
+                </Link>
               </ul>
             </div>
           </div>
@@ -204,58 +369,172 @@ class Header extends Component {
                       >
                         <ul>
                           <li className=" current-menu-item">
-                            <Link to="/">HOME</Link>
+                            <Link
+                              to="/"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              HOME
+                            </Link>
                           </li>
                           <li>
-                            <Link to="/shirt">Shirts</Link>
+                            <Link
+                              to="/shirt"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              Shirts
+                            </Link>
                           </li>
                           <li>
-                            <Link to="/blazers">Blazers</Link>
+                            <Link
+                              to="/blazers"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              Blazers
+                            </Link>
                           </li>
                           <li>
-                            <Link to="/pants">Pants</Link>
+                            <Link
+                              to="/pants"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              Pants
+                            </Link>
                           </li>
                           <li>
-                            <Link to="/howitwork">How It Works</Link>
+                            <Link
+                              to="/howitwork"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              How It Works
+                            </Link>
                           </li>
                           <li>
-                            <Link to="/contactus">Contact</Link>
+                            <Link
+                              to="/contactus"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
+                              Contact
+                            </Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="#">
+                            <Link
+                              to="#"
+                              style={{
+                                textDecoration: "none"
+                              }}
+                            >
                               <i className="fa fa-ellipsis-h" />
                             </Link>
                             <ul className="sub-menu">
-                              <li className="menu-item-has-children">
-                                <Link to="#">shop</Link>
-                                <ul className="sub-menu">
+                              <li
+                              // className="menu-item-has-children"
+                              >
+                                <Link
+                                  to="shop"
+                                  style={{
+                                    textDecoration: "none"
+                                  }}
+                                >
+                                  shop
+                                </Link>
+                                {/* <ul className="sub-menu">
                                   <li>
-                                    <Link to="shop">shop</Link>
+                                    <Link
+                                      to="shop"
+                                      style={{
+                                        textDecoration: "none"
+                                      }}
+                                    >
+                                      shop
+                                    </Link>
                                   </li>
-                                </ul>
+                                </ul> */}
                               </li>
-                              <li className="menu-item-has-children">
-                                <Link to="#">blog</Link>
-                                <ul className="sub-menu">
+                              <li
+                              // className="menu-item-has-children"
+                              >
+                                <Link
+                                  to="newsgrid"
+                                  style={{
+                                    textDecoration: "none"
+                                  }}
+                                >
+                                  blog
+                                </Link>
+                                {/* <ul className="sub-menu">
                                   <li>
-                                    <Link to="newsgrid">blog grid</Link>
+                                    <Link
+                                      to="newsgrid"
+                                      style={{
+                                        textDecoration: "none"
+                                      }}
+                                    >
+                                      blog grid
+                                    </Link>
                                   </li>
                                   <li>
-                                    <Link to="newslist">blog list</Link>
+                                    <Link
+                                      to="newslist"
+                                      style={{
+                                        textDecoration: "none"
+                                      }}
+                                    >
+                                      blog list
+                                    </Link>
                                   </li>
                                   <li>
-                                    <Link to="newsdetail">blog detail</Link>
+                                    <Link
+                                      to="newsdetail"
+                                      style={{
+                                        textDecoration: "none"
+                                      }}
+                                    >
+                                      blog detail
+                                    </Link>
                                   </li>
-                                </ul>
+                                </ul> */}
                               </li>
                               <li>
-                                <Link to="about">About</Link>
+                                <Link
+                                  to="about"
+                                  style={{
+                                    textDecoration: "none"
+                                  }}
+                                >
+                                  About
+                                </Link>
                               </li>
+                              {/* <li>
+                                <Link
+                                  to="404"
+                                  style={{
+                                    textDecoration: "none"
+                                  }}
+                                >
+                                  404
+                                </Link>
+                              </li> */}
                               <li>
-                                <Link to="404">404</Link>
-                              </li>
-                              <li>
-                                <Link to="comingsoon">coming soon</Link>
+                                <Link
+                                  to="comingsoon"
+                                  style={{
+                                    textDecoration: "none"
+                                  }}
+                                >
+                                  coming soon
+                                </Link>
                               </li>
                             </ul>
                           </li>
@@ -266,6 +545,9 @@ class Header extends Component {
                       className="tg-btn tg-btnstartcustomizing"
                       to="#"
                       target="_blank"
+                      style={{
+                        textDecoration: "none"
+                      }}
                     >
                       <span>new</span>Start Customizing
                     </Link>

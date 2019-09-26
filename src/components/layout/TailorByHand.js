@@ -40,17 +40,17 @@ class TailorByHand extends Component {
                     <ul className="tg-apps">
                       <li>
                         <a href="#">
-                          <i className="fa fa-android" />
+                          <i className="fab fa-android" />
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-windows" />
+                          <i className="fab fa-windows" />
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i className="fa fa-apple" />
+                          <i className="fab fa-apple" />
                         </a>
                       </li>
                     </ul>

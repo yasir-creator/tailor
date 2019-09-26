@@ -1,46 +1,39 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class AddToCart extends Component {
+class orderDetails extends Component {
   state = {
     arraydata: null,
+    address: "",
     price: ""
   };
 
   componentDidMount() {
-    // console.log(arraydata);
     let arraydata = JSON.parse(localStorage.getItem("Cart"));
     this.setState({ arraydata: arraydata });
 
     console.log("Retrieved Object from localstorage: ", arraydata);
+
+    let address = JSON.parse(localStorage.getItem("Info"));
+    this.setState({ address: address });
+    console.log("Got it", address);
   }
-
-  // onChange = e => {
-  //   this.setState({ [e.target.name]: e.target.value });
-  // };
-
-  // handleClick = product => {
-  //   console.log("hello", product);
-  //   var arraydata = JSON.parse(localStorage.getItem("Cart"));
-  // e.preventDefault();
-  // const user = {
-  //   name: this.state.name,
-  //   phone: this.state.phone
-  // };
-
   render() {
     const { arraydata } = this.state;
-    let a;
+    const { address } = this.state;
+
+    console.log(this.state);
+    let cartitems;
 
     var totalPrice = 0;
 
     console.log(this.state);
     if (arraydata === null || arraydata === undefined) {
-      a = <h1>loading</h1>;
+      cartitems = <h1>loading</h1>;
     } else {
       if (this.state.arraydata.length > 0) {
         console.log("khgjkhgiashgkhakhkahkahaihfkashfkhfkdfhk");
-        a = arraydata.map(
+        cartitems = arraydata.map(
           arraydata => (
             (totalPrice = arraydata.price + totalPrice),
             (
@@ -91,13 +84,14 @@ class AddToCart extends Component {
           )
         );
       } else {
-        a = <h2>Nothing</h2>;
+        cartitems = <h2>Nothing</h2>;
       }
     }
+
     return (
       <div>
         <div className="container">
-          <h1 className="heading font-weight-bold">Your Selected Items</h1>
+          <h1 className="heading font-weight-bold">Complete Order</h1>
           <table className="table">
             <thead className="thead-dark">
               <tr
@@ -140,7 +134,7 @@ class AddToCart extends Component {
                 </th>
               </tr>
             </thead>
-            <tbody>{a}</tbody>
+            <tbody>{cartitems}</tbody>
             <tfoot>
               <tr>
                 <td
@@ -164,16 +158,24 @@ class AddToCart extends Component {
             </tfoot>
           </table>
         </div>
+        <div
+          style={{
+            marginRight: 800
+          }}
+        >
+          {" "}
+          {address.address} {address.city} {address.zip} {address.country}
+        </div>
 
         <button className="tg-btn mb-5">
           <Link
-            to="/checkout"
+            to="/myorder"
             style={{
               color: "white",
               textDecoration: "none"
             }}
           >
-            Check Out
+            Place Order
           </Link>
         </button>
       </div>
@@ -181,4 +183,4 @@ class AddToCart extends Component {
   }
 }
 
-export default AddToCart;
+export default orderDetails;

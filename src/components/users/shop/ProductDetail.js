@@ -96,10 +96,24 @@ class ProductDetail extends Component {
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <ol className="tg-breadcrumb">
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link
+                        to="/"
+                        style={{
+                          textDecoration: "none"
+                        }}
+                      >
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link to="shirt">product</Link>
+                      <Link
+                        to="shirt"
+                        style={{
+                          textDecoration: "none"
+                        }}
+                      >
+                        product
+                      </Link>
                     </li>
                     <li className="tg-active">Detail</li>
                   </ol>
@@ -173,6 +187,9 @@ class ProductDetail extends Component {
                                 className="tg-btn"
                                 to="/addtocart"
                                 target="_blank"
+                                style={{
+                                  textDecoration: "none"
+                                }}
                               >
                                 Start Customizing
                               </Link>
@@ -184,7 +201,7 @@ class ProductDetail extends Component {
                                       href="https://www.facebook.com/"
                                       target="_blank"
                                     >
-                                      <i className="fa fa-facebook" />
+                                      <i className="fab fa-facebook-f" />
                                     </a>
                                   </li>
                                   <li className="tg-twitter">
@@ -192,7 +209,7 @@ class ProductDetail extends Component {
                                       href="https://twitter.com/"
                                       target="_blank"
                                     >
-                                      <i className="fa fa-twitter" />
+                                      <i className="fab fa-twitter" />
                                     </a>
                                   </li>
                                   <li className="tg-linkedin">
@@ -200,7 +217,7 @@ class ProductDetail extends Component {
                                       href="https://www.linkedin.com/feed/"
                                       target="_blank"
                                     >
-                                      <i className="fa fa-linkedin" />
+                                      <i className="fab fa-linkedin" />
                                     </a>
                                   </li>
                                   <li className="tg-googleplus">
@@ -208,7 +225,7 @@ class ProductDetail extends Component {
                                       href="https://www.google.com/"
                                       target="_blank"
                                     >
-                                      <i className="fa fa-google-plus" />
+                                      <i className="fab fa-google-plus-g" />
                                     </a>
                                   </li>
                                   <li className="tg-rss">
